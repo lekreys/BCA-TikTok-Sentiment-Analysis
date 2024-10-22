@@ -3,3 +3,4 @@ requests
 pandas
 nltk
 Sastrawi
+scikit-learn
