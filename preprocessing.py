@@ -6,7 +6,7 @@ import pickle
 import pandas as pd
 
 import nltk
-nltk.download('punkt')
+nltk.download('punkt_tab')
 nltk.download('stopwords')
 
 def remove_emojis(text):
