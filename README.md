@@ -20,10 +20,9 @@ Dengan analisis ini, diharapkan dapat memberikan wawasan yang berharga mengenai 
 
 
 
-## Link
+## Link : https://bca-tiktok-sentiment-analysis.streamlit.app/
 
 
-https://bca-tiktok-sentiment-analysis.streamlit.app/
 ## Technologies Used
 - Python
 - Streamlit
