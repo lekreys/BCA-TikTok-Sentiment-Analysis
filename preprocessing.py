@@ -59,7 +59,7 @@ def preprocessing(comments) :
 def vectorize_data(data):
 
 
-    with open(r'complaint\Countvectorizer.pkl', 'rb') as f:
+    with open('complaint/Countvectorizer.pkl', 'rb') as f:
         vectorizer = pickle.load(f)
 
     Count = vectorizer.transform(data.preprocessing)
@@ -74,7 +74,7 @@ def predict_sentiment(data_before) :
 
     data = pd.concat([data_count , data_before.text_len] , axis=1)
 
-    with open(r'complaint\LogisticRegression_final_model.pkl', 'rb') as f:
+    with open('complaint/LogisticRegression_final_model.pkl', 'rb') as f:
         model = pickle.load(f)
 
     pred = model.predict(data)
@@ -86,7 +86,7 @@ def predict_sentiment(data_before) :
 def vectorize_data_cat(data):
 
 
-    with open(r'Category\Countvectorizer_cat.pkl', 'rb') as f:
+    with open('Category/Countvectorizer_cat.pkl', 'rb') as f:
         vectorizer = pickle.load(f)
 
     Count = vectorizer.transform(data.preprocessing)
@@ -98,7 +98,7 @@ def predict_sentiment_cat(data_before) :
     data = vectorize_data_cat(data=data_before)
 
 
-    with open(r'Category\PassiveAggClassifier.pkl', 'rb') as f:
+    with open('Category/PassiveAggClassifier.pkl', 'rb') as f:
         model = pickle.load(f)
 
     pred = model.predict(data)
